@@ -12,21 +12,16 @@
     "@types/node": "^12.12.14",
     "jasmine": "^3.5.0",
     "jasmine-console-reporter": "^3.1.0",
-    "npm-watch": "^0.6.0",
+    "nodemon": "^2.0.1",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.2"
   },
   "scripts": {
     "test": "ts-node jasmine.js",
-    "test:watch": "npm-watch test",
+    "test:watch": "nodemon jasmine.js",
+    "nodemon": "npm run nodemon",
     "build": "tsc -p ./",
     "challenge": "npm run build && node dist/challenges/challenge-$CHALLENGE/challenge-$CHALLENGE-$PART.js"
-  },
-  "watch": {
-    "test": {
-      "patterns": ["src"],
-      "extensions": "ts"
-    }
   },
   "author": "Mihael Safaric",
   "license": "MIT"

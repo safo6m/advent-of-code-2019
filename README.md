@@ -16,5 +16,5 @@ npm run test
 or
 
 ```bash
-npm run test
+npm run test:watch
 ```
