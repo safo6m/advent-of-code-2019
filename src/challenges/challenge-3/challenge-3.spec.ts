@@ -1,6 +1,6 @@
+import { of } from 'rxjs';
 import { readFileObservable } from '../../helpers/file-reader';
 import { CrossingWires } from './challenge-3';
-import { of } from 'rxjs';
 
 describe('Challenge 3 - part 1 - Crossing Wires', function() {
   let instance: CrossingWires;
