@@ -8,6 +8,12 @@
 
 ### Test
 
+```bash
+npm run test
 ```
+
+or
+
+```bash
 npm run test
 ```
