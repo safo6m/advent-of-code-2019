@@ -81,7 +81,7 @@ class CoordinateSystem {
   }
 }
 
-export class CrossingWires {
+export class CrossedWires {
   public calculateManhattanDistanceOfTheClosesIntersection(input$: Observable<any>): Observable<any> {
     return this.generateCrossingPoints(input$).pipe(
       map((coordinatePoint: CoordinatePoint) => this.calculateManhattanDistance(coordinatePoint.point)),

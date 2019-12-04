@@ -1,8 +1,8 @@
-import { from, empty } from 'rxjs';
+import { from, empty, OperatorFunction } from 'rxjs';
 import { switchMap, pairwise, filter, count, map } from 'rxjs/operators';
 import { getDigits } from '../../helpers/get-digits';
 
-export function filterNumbersWithTwoConsecutiveEqualDigits() {
+export function filterNumbersWithTwoConsecutiveEqualDigits(): OperatorFunction<number, unknown> {
   return switchMap((pass: number) => {
     return from(getDigits(pass)).pipe(
       pairwise(),

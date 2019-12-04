@@ -1,8 +1,8 @@
-import { from } from 'rxjs';
+import { from, OperatorFunction } from 'rxjs';
 import { switchMap, pairwise, map, every, filter } from 'rxjs/operators';
 import { getDigits } from '../../helpers/get-digits';
 
-export function filterNumbersWithIncreasingDigits() {
+export function filterNumbersWithIncreasingDigits(): OperatorFunction<number, unknown> {
   return switchMap((pass: number) => {
     return from(getDigits(pass)).pipe(
       pairwise(),

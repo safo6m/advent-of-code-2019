@@ -1,5 +1,4 @@
-import { of, from } from 'rxjs';
-import { map, concatAll } from 'rxjs/operators';
+import { of } from 'rxjs';
 import { readFileObservable } from '../../helpers/file-reader';
 import { ProgramAlarm } from './challenge-2';
 import { parseLineOfNumbers } from '../../shared/operators/parse-line-of-numbers';

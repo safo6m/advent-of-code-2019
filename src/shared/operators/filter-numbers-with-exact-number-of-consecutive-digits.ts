@@ -1,8 +1,8 @@
-import { from } from 'rxjs';
+import { from, OperatorFunction } from 'rxjs';
 import { switchMap, scan, takeLast, filter, map, count } from 'rxjs/operators';
 import { getDigits } from '../../helpers/get-digits';
 
-export function filterNumbersWithExactNumberOfConsecutiveDigits(numberOfConsecutiveDigits: number) {
+export function filterNumbersWithExactNumberOfConsecutiveDigits(numberOfConsecutiveDigits: number): OperatorFunction<number, unknown> {
   return switchMap((pass: number) => {
     return from(getDigits(pass)).pipe(
       scan((acc: Array<Array<number>>, digit: number) => {

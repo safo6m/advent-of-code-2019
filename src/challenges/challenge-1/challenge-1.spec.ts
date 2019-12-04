@@ -1,6 +1,6 @@
+import { of } from 'rxjs';
 import { readFileObservable } from '../../helpers/file-reader';
 import { SpacecraftModule } from './challenge-1';
-import { of } from 'rxjs';
 
 describe('Challenge 1 - Simple fuel calculation', function() {
   let instance: SpacecraftModule;

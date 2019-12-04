@@ -1,7 +1,7 @@
-import { from, of } from 'rxjs';
+import { from, of, OperatorFunction } from 'rxjs';
 import { map, concatAll, switchMap } from 'rxjs/operators';
 
-export function parseLineOfData() {
+export function parseLineOfData(): OperatorFunction<string, string> {
   return switchMap((input: string) => {
     return of(input).pipe(
       map((s: string) => s.split(',')),

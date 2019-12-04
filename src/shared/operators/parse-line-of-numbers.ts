@@ -1,8 +1,8 @@
-import { of } from 'rxjs';
+import { of, OperatorFunction } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
 import { parseLineOfData } from './parse-line-of-data';
 
-export function parseLineOfNumbers() {
+export function parseLineOfNumbers(): OperatorFunction<string, number> {
   return switchMap((input: string) => {
     return of(input).pipe(
       parseLineOfData(),
